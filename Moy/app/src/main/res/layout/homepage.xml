@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	>
+
+
+
+	    <LinearLayout
+	        android:orientation="vertical"
+	        style="@style/layout_vertical"
+			android:background="#03A9f4"
+			android:layout_height="60dp">
+
+
+	        <TextView
+				style="@style/layout_wrap"
+	            android:layout_weight="3"
+	            android:text="M O Y "
+				android:gravity="left"
+				android:layout_marginTop="15dp"
+				android:layout_marginLeft="16dp"
+	            android:textColor="@drawable/white"
+				android:textStyle="bold"
+	            android:textSize="24sp" />
+
+
+	    </LinearLayout>
+
+
+	<com.moy.activity.MyScrollView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="35dp"
+				android:layout_marginTop="30dp"
+				android:orientation="horizontal"
+				>
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="18dp"
+					android:text="运动相关"
+					android:textSize="24dp"
+					/>
+
+				<TextView
+					android:id="@+id/textView1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginRight="16dp"
+					android:gravity="right"
+					android:text=""
+					android:textSize="24dp"
+
+					/>
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="18dp"
+				android:layout_marginTop="5dp"
+				android:alpha="0.5"
+				android:text="锻炼身体有益健康，请保持每日锻炼！"
+				android:textSize="16dp"
+				/>
+
+			<com.moy.activity.ScrollerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+											 android:id="@+id/scroller1"
+											 android:layout_width="wrap_content"
+											 android:layout_height="150dp"
+											 android:layout_marginBottom="20dp"
+											 android:layout_marginLeft="16dp"
+											 android:layout_marginRight="16dp"
+											 android:layout_marginTop="16dp"
+											 android:layout_weight="0.1"
+											 android:background="@drawable/gray_transparent"
+											 android:weightSum="1">
+
+				<ImageView
+					android:id="@+id/HomepageSportOne"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:background="@mipmap/s7"
+					android:layout_weight="1"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="心血管患者\n如何参加体育运动"
+					android:layout_weight="1"
+					android:textSize="15sp"/>
+
+				<ImageView
+					android:id="@+id/HomepageSportTwo"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/sport002"
+					android:layout_weight="1"
+					/>
+
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="慢跑可以减肥\n也能降低血压"
+					android:textSize="20sp"
+					android:layout_weight="1"
+					/>
+
+				<ImageView
+					android:id="@+id/HomepageSportThree"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/sport003"
+					android:layout_weight="1"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="中华养生功\n降压太极拳"
+					android:textSize="25sp"
+					android:layout_weight="1"
+					/>
+
+				<ImageView
+					android:id="@+id/HomepageSportFour"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/sport004"
+					android:layout_weight="1"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="骑自行车\n有助于降血压"
+					android:textSize="25sp"
+					android:layout_weight="1"
+					/>
+
+			</com.moy.activity.ScrollerLayout>
+
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginTop="10dp"
+				android:background="#CCCCCC"
+				/>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="35dp"
+				android:layout_marginTop="30dp"
+				android:orientation="horizontal"
+				>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="18dp"
+					android:text="饮食相关"
+					android:textSize="24dp"
+					/>
+
+				<TextView
+					android:id="@+id/textView2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginRight="16dp"
+					android:gravity="right"
+					android:textSize="24dp"
+
+					/>
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="18dp"
+				android:layout_marginTop="5dp"
+				android:alpha="0.5"
+				android:text="良好的食物搭配，才能使我们更加健康！"
+				android:textSize="16dp"
+				/>
+
+
+			<com.moy.activity.ScrollerLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+											  android:id="@+id/scroller2"
+											  android:layout_width="wrap_content"
+											  android:layout_height="150dp"
+											  android:layout_marginBottom="20dp"
+											  android:layout_marginLeft="16dp"
+											  android:layout_marginRight="16dp"
+											  android:layout_marginTop="16dp"
+											  android:layout_weight="0.1"
+											  android:background="@drawable/gray_transparent"
+				>
+
+				<ImageView
+					android:id="@+id/HomepageFoodOne"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/foodshow001"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="老年人的冬天\n吃什么好"
+					android:layout_weight="1"
+					android:textSize="20sp"/>
+
+				<ImageView
+					android:id="@+id/HomepageFoodTwo"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/food002"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="家家都有的这种菜 \n竟是天然的“血管清洁工”"
+					android:layout_weight="1"
+					android:textSize="15sp"/>
+
+				<ImageView
+					android:id="@+id/HomepageFoodThree"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/food003"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="芦笋炒虾仁 \n鲜美利心率"
+					android:layout_weight="1"
+					android:textSize="20sp"/>
+
+				<ImageView
+					android:id="@+id/HomepageFoodFour"
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:background="@mipmap/food004"
+					/>
+				<TextView
+					android:layout_width="164dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="16dp"
+					android:gravity="center"
+					android:text="与心血管疾病\n最相关的饮食习惯"
+					android:layout_weight="1"
+					android:textSize="16sp"/>
+			</com.moy.activity.ScrollerLayout2>
+
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginTop="10dp"
+				android:background="#CCCCCC"
+				/>
+
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="80dp"
+				android:layout_gravity="center"
+				android:layout_marginBottom="10dp"
+				android:layout_marginTop="10dp"
+				android:alpha="0.5"
+				android:gravity="center"
+				android:text="——·M O Y·——"
+				android:textSize="16dp"
+				/>
+
+		</LinearLayout>
+	</com.moy.activity.MyScrollView>
+</LinearLayout>

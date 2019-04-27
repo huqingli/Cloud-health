@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/title_color"
+        >
+        <Button
+            android:id="@+id/return_btn_username"
+            style="@style/layout_horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@mipmap/back"
+            android:scaleX="0.3"
+            android:scaleY="0.4" />
+        <TextView
+            android:layout_weight="3"
+            style="@style/layout_horizontal"
+            android:text="更改用户名"
+            android:textSize="30sp"
+            android:textColor="@drawable/white"
+            android:gravity="center"/>
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <TableRow
+        style="@style/layout_vertical"
+        android:layout_weight="0.2"
+        android:layout_marginTop="10dp">
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="用户名"
+            android:textSize="18sp"
+            android:textColor="@drawable/blue" />
+        <EditText
+            android:id="@+id/username_change"
+            android:layout_weight="2"
+            android:layout_height="40dp"
+            style="@style/layout_horizontal"
+            android:background="@drawable/bg_edittext"
+            android:textColor="#000"
+            android:textSize="18sp" />
+        <View
+            android:layout_weight="0.4"
+            style="@style/layout_horizontal"/>
+    </TableRow>
+
+    <Button
+        android:id="@+id/confirm_username"
+        android:layout_marginTop="15dp"
+        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:text="确定"
+        android:textSize="28sp"
+        android:textColor="@drawable/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/bg_confirm"/>
+
+    <View
+        android:layout_weight="1"
+        style="@style/layout_vertical"/>
+
+</LinearLayout>

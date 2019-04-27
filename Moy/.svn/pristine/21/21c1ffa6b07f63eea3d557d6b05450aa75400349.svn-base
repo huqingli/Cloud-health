@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/white">
+    
+   <!--  <LinearLayout 
+        style="@style/layout_vertical"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+        
+        <TextView
+        android:text="运动推荐"
+        android:textSize="36sp"
+        style="@style/layout_wrap"
+        android:layout_gravity="center"
+		android:gravity="center"
+        android:textColor="@drawable/blue"/>
+        
+    </LinearLayout>
+    <View 
+        android:layout_height="2px"
+        style="@style/layout_vertical"
+        android:background="@drawable/black"/>
+    
+	<LinearLayout 
+	    style="@style/layout_vertical"
+	    android:layout_weight="1"
+	    android:orientation="horizontal">
+        <TextView 
+            android:text="宜："
+            android:textSize="48sp"
+            android:textColor="@drawable/blue"
+            android:gravity="bottom"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+        <TextView 
+            android:id="@+id/good"
+            android:text="散步，适量慢跑，仰卧起坐，甩手运动等"
+            android:textSize="24sp"
+            android:textColor="@drawable/blue"
+            android:gravity="bottom"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+	    
+	</LinearLayout>
+	
+	<LinearLayout 
+	    style="@style/layout_vertical"
+	    android:layout_weight="1"
+	    android:orientation="horizontal">
+        <TextView 
+            android:text="忌："
+            android:textSize="48sp"
+            android:textColor="@drawable/blue"
+            android:gravity="bottom"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+        <TextView 
+            android:id="@+id/bad"
+            android:text="剧烈运动"
+            android:textSize="24sp"
+            android:textColor="@drawable/blue"
+            android:gravity="bottom"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+	    
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_weight="2"
+	    style="@style/layout_vertical"
+	    android:orientation="vertical">"
+	    
+	</LinearLayout>
+	 -->
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+         <TextView
+             style="@style/layout_wrap"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:text="运动推荐"
+             android:textColor="@drawable/blue"
+             android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心脏情况："
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好" 
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" 
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/sport"
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:text="推荐语句" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sport1" />
+
+</LinearLayout>

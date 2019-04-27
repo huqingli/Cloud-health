@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_height="40dp"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/layout_wrap"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="检测报告"
+            android:textColor="@drawable/blue"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <View
+        style="@style/layout_vertical"
+        android:layout_height="2px"
+        android:background="@drawable/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="测量时间："
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/dateex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            style="@style/layout_vertical"
+            android:layout_height="2px"
+            android:background="@drawable/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="姓名:"
+                    android:textColor="@drawable/blue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/report_name"
+                    android:text="待定"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@drawable/blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="性别:"
+                    android:textColor="@drawable/blue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/report_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="待定"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@drawable/blue"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="年龄:"
+                    android:textColor="@drawable/blue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/report_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="待定"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@drawable/blue"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                style="@style/layout_vertical"
+                android:layout_height="2px"
+                android:background="@drawable/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="血压:"
+                    android:textColor="@drawable/blue"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="高压:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_highP"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="低压:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_lowP"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/layout_vertical"
+                android:layout_height="2px"
+                android:background="@drawable/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.55"
+                    android:gravity="center"
+                    android:text="心率:"
+                    android:textColor="@drawable/blue"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="心率:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_heartrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="心脏年龄:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_heartage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="呼吸数:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_respirationrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="放松程度:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_relaxationlevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="5分钟平均:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_fmheartrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:text="R_RInterval:"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/report_rrinterval"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="待定(标准)"
+                            android:textColor="@drawable/blue"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/layout_vertical"
+        android:layout_height="2px"
+        android:background="@drawable/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="健康等级："
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="等级"
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+     
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/resultcomment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="评价"
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/layout_vertical"
+        android:layout_height="2px"
+        android:background="@drawable/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心脏年龄："
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/heartage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年龄"
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+     
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/heartcomment"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="评价"
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    
+
+   <!--  <View
+        style="@style/layout_vertical"
+        android:layout_height="2px"
+        android:background="@drawable/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心脏风险："
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风险"
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+     
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/resultcomment2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="风险评估"
+            android:textColor="@drawable/blue"
+            android:textSize="15sp" />
+
+    </LinearLayout> -->
+
+
+</LinearLayout>

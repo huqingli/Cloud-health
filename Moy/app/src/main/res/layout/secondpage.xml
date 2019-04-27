@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_height="60dp"
+        android:background="#03A9f4"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/layout_wrap"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="健康测试"
+            android:layout_marginTop="15dp"
+            android:textColor="@drawable/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        style="@style/layout_full"
+        android:orientation="vertical">
+        <ImageView 
+            android:layout_weight="3"
+            style="@style/layout_vertical"
+            android:src="@drawable/secondpage_imgview"
+            android:layout_gravity="center_horizontal"
+            android:maxWidth="300dp"
+            android:maxHeight="300dp"/>
+        <TextView
+            android:layout_weight="0.47"
+            style="@style/layout_vertical"
+            android:hint="请打开设备开关开始测量！"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+        <Button
+            android:id="@+id/bloodpressure"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            android:layout_gravity="center_horizontal"
+            android:text="血压测量"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="30dp"/>"
+
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            android:layout_gravity="center_horizontal"
+            android:text="心电测量"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="30dp"/>"
+
+
+    </LinearLayout>
+
+    
+
+</LinearLayout>

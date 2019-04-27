@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@drawable/homepage_view"
+	>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_gravity="bottom">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<ImageButton
+				android:id="@+id/food"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:background="@drawable/transparent"
+				android:src="@drawable/imgbtn_sport" />
+			<ImageButton
+				android:id="@+id/result"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:background="@drawable/transparent"
+				android:src="@drawable/imgbtn_food" />
+		</LinearLayout>
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<ImageButton
+					android:id="@+id/sport"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_weight="1"
+					android:background="@drawable/transparent"
+					android:src="@drawable/imgbtn_weather" />
+				<ImageButton
+					android:id="@+id/news"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_weight="1"
+					android:background="@drawable/transparent"
+					android:src="@drawable/imgbtn_news" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+package com.moy.activity;
+
+import com.moy.util.MyApplication;
+
+
+import android.app.Fragment;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class FourthpageFragment extends Fragment {
+	private MyApplication application;
+	
+	private LinearLayout info;
+	
+	private String id;
+	private String sex;
+	private String age;
+	private String height;
+	private String weight;
+	
+	private TextView tv_id;
+	private TextView tv_sex;
+	private TextView tv_age;
+	private TextView tv_height;
+	private TextView tv_weight;
+	
+	private Button exit;
+	
+	public FourthpageFragment(){
+		
+		
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+		View view = inflater.inflate(R.layout.fourthpage, container, false);
+
+		application = (MyApplication) getActivity().getApplication();
+		info = (LinearLayout)view.findViewById(R.id.info);
+		exit = (Button)view.findViewById(R.id.exit);
+		
+		tv_id = (TextView)view.findViewById(R.id.id);
+		tv_sex = (TextView)view.findViewById(R.id.sex);
+		tv_age = (TextView)view.findViewById(R.id.age);
+		tv_height = (TextView)view.findViewById(R.id.height);
+		tv_weight = (TextView)view.findViewById(R.id.weight);
+		
+		tv_id.setText("用户ID：" + application.getUser().getUserId());
+		tv_sex.setText(application.getUser().getSex());
+		tv_age.setText(application.getUser().getAge() + "岁");
+		tv_height.setText(application.getUser().getHeight() + "cm");
+		tv_weight.setText(application.getUser().getWeight() + "kg");
+		
+		info.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(getActivity(), ModifyActivity.class);
+				startActivity(intent);
+				
+			}
+		});
+		
+		exit.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				application.userLoginOut();
+				Intent intent = new Intent(getActivity(), LoginActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		
+		return view;
+	}
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <item android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <shape android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--    边框颜色    -->
+            <solid android:color="#d6d6d6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </shape>
+    </item>
+    <item android:top="1dp" android:bottom="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <shape
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--    边框里面的颜色    -->
+            <solid android:color="#ffffff"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/white">
+    
+    <LinearLayout 
+        style="@style/layout_vertical"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+        
+        <TextView
+        android:text="检测结果"
+        android:textSize="36sp"
+        style="@style/layout_wrap"
+        android:layout_gravity="center"
+		android:gravity="center"
+        android:textColor="@drawable/blue"/>
+        
+    </LinearLayout>
+    <View 
+        android:layout_height="2px"
+        style="@style/layout_vertical"
+        android:background="@drawable/black"/>
+    
+	<ImageView 
+	    android:id="@+id/health_state"
+	    
+	    android:layout_gravity="center"
+	    android:scaleType="fitCenter"
+	    style="@style/layout_vertical"
+	    android:layout_weight="1"/>
+	<LinearLayout
+	    android:layout_weight="3"
+	    style="@style/layout_vertical"
+	    android:orientation="vertical">
+	    <TextView
+	        android:id="@+id/current_state"
+	        android:text=""
+	        android:layout_height="40dp"
+	        style="@style/layout_vertical"
+	        android:textSize="24sp"
+	        android:textColor="@drawable/blue"
+	        android:gravity="center"/>
+	    
+	    <TextView
+	        android:id="@+id/current_rate"
+	        android:text=""
+	        android:layout_height="40dp"
+	        style="@style/layout_vertical"
+	        android:textSize="24sp"
+	        android:textColor="@drawable/blue"
+	        android:gravity="center"/>
+	    
+	    <TextView
+	        android:id="@+id/advice"
+	        android:text=""
+	        android:layout_height="40dp"
+	        style="@style/layout_vertical"
+	        android:textSize="16sp"
+	        android:textColor="@drawable/red"
+	        android:gravity="center"/>
+	    
+	    <Button android:id="@+id/return_home"
+	        android:text="返回首页"
+	        android:layout_width="200dp"
+	        android:layout_height="50dp"
+	        android:textSize="36sp"
+	        android:background="@drawable/bg_confirm"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@drawable/bt_general_attribute"/>
+	</LinearLayout>
+
+    
+
+</LinearLayout>

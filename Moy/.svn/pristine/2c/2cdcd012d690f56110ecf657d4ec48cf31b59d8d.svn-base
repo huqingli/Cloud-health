@@ -1,0 +1,109 @@
+package com.moy.activity;
+
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.LinearLayout;
+
+public class MenuActivity extends Activity implements android.view.View.OnClickListener{
+		//UI
+		private LinearLayout homepage;
+		private LinearLayout secondpage;
+		private LinearLayout thirdpage;
+		private LinearLayout fourthpage;
+		//Fragment
+		private HomepageFragment fg1;
+		private SecondpageFragment fg2;
+		private ThirdpageFragment fg3;
+		private FourthpageFragment fg4;
+		private FragmentManager fManager;
+		
+		@Override
+		protected void onCreate(Bundle savedInstanceState){
+			super.onCreate(savedInstanceState);
+			requestWindowFeature(Window.FEATURE_NO_TITLE);
+			setContentView(R.layout.bottom_menu);
+			fManager = getFragmentManager();
+			bindViews();
+			homepage.performClick();
+		}
+		//UI初始化与事件的绑定
+		private void bindViews(){
+			homepage = (LinearLayout)findViewById(R.id.homepage);
+			secondpage = (LinearLayout)findViewById(R.id.secondpage);
+			thirdpage = (LinearLayout)findViewById(R.id.thirdpage);
+			fourthpage = (LinearLayout)findViewById(R.id.fourthpage);
+			
+			homepage.setOnClickListener(this);
+			secondpage.setOnClickListener(this);
+			thirdpage.setOnClickListener(this);
+			fourthpage.setOnClickListener(this);
+		}
+		private void setSelected(){
+			homepage.setSelected(false);
+			secondpage.setSelected(false);
+			thirdpage.setSelected(false);
+			fourthpage.setSelected(false);
+		}
+		
+		//隐藏Fragment
+		private void hideAllFragment(FragmentTransaction fragmentTransaction){
+			if(fg1 != null)fragmentTransaction.hide(fg1);
+			if(fg2 != null)fragmentTransaction.hide(fg2);
+			if(fg3 != null)fragmentTransaction.hide(fg3);
+			if(fg4 != null)fragmentTransaction.hide(fg4);
+		}
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			FragmentTransaction fTransaction = fManager.beginTransaction();
+			hideAllFragment(fTransaction);
+			switch(v.getId()){
+			case R.id.homepage:
+				setSelected();
+				homepage.setSelected(true);
+				if(fg1 == null){
+					fg1 = new HomepageFragment();
+					fTransaction.add(R.id.ly_content, fg1);
+				}else{
+					fTransaction.show(fg1);
+				}
+				break;
+			case R.id.secondpage:
+				setSelected();
+				secondpage.setSelected(true);
+				if(fg2 == null){
+					fg2 = new SecondpageFragment();
+					fTransaction.add(R.id.ly_content, fg2);
+				}else{
+					fTransaction.show(fg2);
+				}
+				break;
+			case R.id.thirdpage:
+				setSelected();
+				thirdpage.setSelected(true);
+				if(fg3 == null){
+					fg3 = new ThirdpageFragment();
+					fTransaction.add(R.id.ly_content, fg3);
+				}else{
+					fTransaction.show(fg3);
+				}
+				break;
+			case R.id.fourthpage:
+				setSelected();
+				fourthpage.setSelected(true);
+				if(fg4 == null){
+					fg4 = new FourthpageFragment();
+					fTransaction.add(R.id.ly_content, fg4);
+				}else{
+					fTransaction.show(fg4);
+				}
+				break;
+			}
+			fTransaction.commit();
+		}
+	}

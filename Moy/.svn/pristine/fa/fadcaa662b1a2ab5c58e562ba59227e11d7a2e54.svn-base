@@ -1,0 +1,226 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fancychart.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\fancychart.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\resultabouttest.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\resultabouttest.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\examination.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\examination.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\homepage.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\homepage.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\secondpage.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\secondpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_message_step2.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\login_message_step2.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chartview.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\chartview.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register_confirm_phonenum.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\register_confirm_phonenum.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\homepage.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\homepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_otherway_popup.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\login_otherway_popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\login.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sport.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\sport.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\resetpwd.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\resetpwd.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\modify.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\modify.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\addinfo.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\addinfo.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\food.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\food.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\validatepage.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\validatepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\forgotpwd.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\forgotpwd.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_test.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\activity_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\food.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\food.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\addinfo.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\addinfo.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register_confirm_phonenum.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\register_confirm_phonenum.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\result.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\result.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\splash.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_message_step1.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\login_message_step1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\validatepage.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\validatepage.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fourthpage.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\fourthpage.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thirdpage.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\thirdpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\resultabouttest.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\resultabouttest.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\loading.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\loading.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bottom_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\bottom_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\assistance.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\assistance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_test.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\activity_test.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sport.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\sport.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bottom_menu.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\bottom_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_message_step2.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\login_message_step2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fancychart.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\fancychart.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\result.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\result.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\register.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\weather.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_message_step1.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\login_message_step1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fourthpage.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\fourthpage.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\loading.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\loading.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\forgotpwd.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\forgotpwd.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chartview.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\chartview.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\examination.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\examination.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_otherway_popup.xml",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\layout\\login_otherway_popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\weather.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\resetpwd.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\resetpwd.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\modify.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\modify.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\secondpage.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\secondpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thirdpage.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\thirdpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\layout\\assistance.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\layout\\assistance.xml"
+    }
+]

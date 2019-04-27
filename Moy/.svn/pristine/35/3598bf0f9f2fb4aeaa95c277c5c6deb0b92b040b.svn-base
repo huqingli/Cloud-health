@@ -1,0 +1,541 @@
+package com.moy.activity;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+import org.achartengine.ChartFactory;
+import org.achartengine.GraphicalView;
+import org.achartengine.chart.PointStyle;
+import org.achartengine.model.XYMultipleSeriesDataset;
+import org.achartengine.model.XYSeries;
+import org.achartengine.renderer.XYMultipleSeriesRenderer;
+import org.achartengine.renderer.XYSeriesRenderer;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.moy.handler.ExaminationHandler;
+import com.moy.handler.GetdataHandler;
+import com.moy.handler.RegisterHandler;
+import com.moy.handler.SaverateHandler;
+import com.moy.util.MyApplication;
+import com.neurosky.thinkgear.TGDevice;
+//import com.test.neurosky.HelloEKGActivity;
+//import com.test.neurosky.R;
+
+import android.app.ActionBar.LayoutParams;
+import android.app.Activity;
+import android.app.Application;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.telephony.SmsManager;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class ExaminationActivity extends Activity {
+	BluetoothAdapter bluetoothAdapter;
+	TGDevice tgDevice;
+	SQLiteDatabase db;
+	
+    int 	subjectContactQuality_last;
+    int		subjectContactQuality_cnt;
+
+	Button bt_connect,bt_disconnect,bt_clean;
+	TextView tv_HeartRate,tv_HeartAge,tv_RespirationRate,tv_RelaxationLevel,tv_5minHeartAge,tv_rrInterval;
+	TextView tv_Title;
+	EditText et_age;	
+	public int average_heartrate = 0;
+	int len = 0;
+	int tem_heartrate_difference = 0;
+	int tem_sum = 0;//sum of heart rate difference
+	int value = 0;//new point
+	int tem_value = 0;
+	private GraphicalView chart;
+	private LinearLayout linear;
+	private XYSeries hseries;
+	//draw section
+	XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
+	XYSeriesRenderer dxyrenderer = new XYSeriesRenderer(),hxyrenderer;
+	 //make data store
+    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();      
+    private int addX = -1, addY;    
+    int[] xv = new int[50]; 
+    int[] yv = new int[50]; 
+    private String heartRate;
+    private String heartAge;
+    private String relaxationLevel;
+    private String respirationRate;
+    private String fmHeartAge;
+    private String date;
+    private String rrInterval;
+    private MyApplication application;
+    private int heartriskaware;
+    public  String  username =application.getUser().getUserName();
+  
+
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.examination);
+        username =application.getUser().getUserName();
+        
+        subjectContactQuality_last = -1; /* start with impossible value */
+        subjectContactQuality_cnt = 200; /* start over the limit, so it gets reported the 1st time */
+
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if(bluetoothAdapter == null) {
+        	// Alert user that Bluetooth is not available
+        	Toast.makeText(this, "蓝牙不可见", Toast.LENGTH_LONG).show();
+        	///finish();
+        	return;
+        }else {
+        	// create the TGDevice 
+        	tgDevice = new TGDevice(bluetoothAdapter, handler);     	
+        }
+        
+        bt_connect = (Button)findViewById(R.id.connect);
+        bt_disconnect = (Button)findViewById(R.id.disconnect);
+        bt_clean = (Button)findViewById(R.id.clean);
+        tv_HeartRate = (TextView)findViewById(R.id.heartrate);
+        tv_HeartRate.setText("");
+        tv_HeartAge = (TextView)findViewById(R.id.heartage);
+        tv_HeartAge.setText("");
+        tv_RespirationRate = (TextView)findViewById(R.id.respirationrate);
+        tv_RespirationRate.setText("");
+        tv_RelaxationLevel = (TextView)findViewById(R.id.relaxationlevel);
+        tv_RelaxationLevel.setText("");
+        tv_5minHeartAge = (TextView)findViewById(R.id.minhearage);
+        tv_5minHeartAge.setText("");
+        tv_rrInterval = (TextView)findViewById(R.id.rrinterval);
+        tv_rrInterval.setText( "" );
+       // tv_Title = (TextView)findViewById(R.id.textView11);
+       // tv_Title.setText( "NeuroSky: " + TGDevice.version + " " + TGDevice.build_title);
+
+        et_age = (EditText)findViewById(R.id.age);
+
+        
+        bt_connect.setOnClickListener(new OnClickListener(){
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//clean screen
+				tv_HeartRate.setText("");			
+				tv_HeartAge.setText("");
+				tv_RelaxationLevel.setText("");				
+				tv_RespirationRate.setText("");
+				tv_5minHeartAge.setText( "" );
+				tv_rrInterval.setText( "" );
+				//et_age.setText("");
+				dataset.removeSeries(hseries);				
+				hseries.clear();
+				dataset.addSeries(hseries);	
+				chart.invalidate();
+				
+				
+				//hide keyboard
+				InputMethodManager imm = (InputMethodManager)getSystemService(ExaminationActivity.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(et_age.getWindowToken(), 0);
+				if(TextUtils.isEmpty(et_age.getText()))
+            	{
+            		Toast.makeText(ExaminationActivity.this, "请输入年纪!", Toast.LENGTH_LONG).show();
+            	}
+				else
+				{
+					tgDevice.connect(true);
+				}
+								
+			}
+        });
+
+        bt_disconnect.setOnClickListener(new OnClickListener(){
+        	
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+//				SimpleDateFormat   formatter =new   SimpleDateFormat   ("yyyy年MM月dd日   HH:mm:ss");     
+			     Date curDate =  new Date(System.currentTimeMillis());  
+			  if(tv_HeartRate.getText().toString()!="")
+					 /* &&tv_HeartAge.getText().toString()!=""&&tv_rrInterval.getText().toString()!="")*/
+			  {
+				heartRate=tv_HeartRate.getText().toString();
+			    heartAge=tv_HeartAge.getText().toString();
+			    relaxationLevel=tv_RelaxationLevel.getText().toString();
+			    respirationRate=tv_RespirationRate.getText().toString();
+			    fmHeartAge=tv_5minHeartAge.getText().toString();
+			    date=curDate.toString();
+			    rrInterval=tv_rrInterval.getText().toString();
+			   // heartriskaware=
+			    String result = ExaminationHandler.loadresult( heartRate, heartAge,  relaxationLevel,  respirationRate,
+						fmHeartAge,date, rrInterval,username);
+			  }
+			  else
+			  {
+				  Toast.makeText(ExaminationActivity.this, "请测试！", Toast.LENGTH_LONG).show();
+			  }
+				tgDevice.close();
+			Intent intent = new Intent(ExaminationActivity.this, MenuActivity.class);
+			startActivity(intent);
+			/*Intent intent = new Intent(); 
+		    intent.setClass(ExaminationActivity.this, SecondpageFragment.class);
+			startActivity(intent);*/
+				//clean screen
+				/*tv_HeartRate.getText().setText("1");			
+				tv_HeartAge.setText("");
+				tv_RelaxationLevel.setText("11");				
+				tv_RespirationRate.setText("11");
+				tv_5minHeartAge.setText( "" );
+				tv_rrInterval.setText( "" );
+				et_age.setText("");
+				dataset.removeSeries(hseries);				
+				hseries.clear();
+				dataset.addSeries(hseries);
+				chart.invalidate();*/
+				
+			}
+        	
+        });
+        bt_clean.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				tv_HeartRate.setText("");			
+				tv_HeartAge.setText("");
+				tv_RelaxationLevel.setText("");
+				tv_RespirationRate.setText("");
+				tv_5minHeartAge.setText( "" );
+				tv_rrInterval.setText( "" );
+				dataset.removeSeries(hseries);				
+				hseries.clear();
+				dataset.addSeries(hseries); //开始折线画图
+				chart.invalidate();
+				
+			}
+        	
+        });
+        //setup the draw section        
+        renderer.setPointSize(3);
+        renderer.setZoomButtonsVisible(true);
+        renderer.setShowGrid(true);
+        renderer.setXAxisMax(50);
+        renderer.setXAxisMin(0);
+        renderer.setYAxisMax(150);
+        renderer.setYAxisMin(0);
+        renderer.setXLabels(10);
+        renderer.setYLabels(10);
+        renderer.setAxesColor(Color.BLACK);
+        renderer.setBackgroundColor(Color.WHITE);
+        renderer.setApplyBackgroundColor(true);
+        //set up heart rate
+        hxyrenderer = new XYSeriesRenderer();
+        hxyrenderer.setColor(Color.BLUE);
+        hxyrenderer.setPointStyle(PointStyle.DIAMOND);
+        renderer.addSeriesRenderer(hxyrenderer);
+        hseries = new XYSeries("heartrate");
+        dataset.addSeries(hseries);
+        //setup the draw in screen
+        linear = (LinearLayout)findViewById(R.id.linear1);
+        chart = ChartFactory.getLineChartView(ExaminationActivity.this, dataset, renderer);
+        linear.addView(chart,new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        
+    }
+  //turn off app when touch return button of phone
+    @Override
+    public boolean onKeyDown(int keyCode,KeyEvent event)
+    {
+    	if(keyCode==KeyEvent.KEYCODE_BACK&&event.getRepeatCount()==0)
+    	{
+    		tgDevice.close();
+    		this.finish();
+    		return true;
+    	}
+    	return super.onKeyDown(keyCode, event);
+    }
+    //update live curve
+    public void updateChart(XYSeries series,int newValue)
+    {
+    	dataset.removeSeries(series);
+    	int length = series.getItemCount();
+    	//only maximum 50 points
+        if(length>=50)
+        {
+        	
+        	for(int i = 0;i<length-1;i++)
+        	{
+        		xv[i] = (int)series.getX(i);
+        		yv[i] = (int)series.getY(i+1);
+        	}
+        	series.clear();
+        	addX = length-1; 
+            addY = newValue;
+            for(int j = 0;j<length-1;j++)
+            {
+            	series.add(xv[j], yv[j]);
+            }
+            series.add(addX, addY);
+            dataset.addSeries(series); 
+        }
+        else
+        {
+        	addX = length;
+        	addY = newValue;
+            series.add(addX, addY);
+            dataset.addSeries(series);
+        }
+        
+        chart.invalidate(); 
+    }
+    /**
+     * Handles messages from TGDevice
+     */
+    private final Handler handler = new Handler() {
+    	int i=0,j=0,k=0;
+        @Override
+        public void handleMessage(Message msg) {
+        	switch (msg.what) {
+        	case TGDevice.MSG_MODEL_IDENTIFIED:
+        		/*
+        		 * now there is something connected,
+        		 * time to set the configurations we need
+        		 */
+            	//tv.append("Model Identified\n");
+            	Toast.makeText(ExaminationActivity.this, "用户识别！",Toast.LENGTH_LONG).show();	
+                tgDevice.setBlinkDetectionEnabled(true); // not allowed on EKG hardware, here to show the override message
+                tgDevice.setRespirationRateEnable(true); 
+        		break;
+
+            case TGDevice.MSG_STATE_CHANGE:
+
+                switch (msg.arg1) {
+	                case TGDevice.STATE_IDLE:
+	                    break;
+	                case TGDevice.STATE_CONNECTING:	         	
+	                	Toast.makeText(ExaminationActivity.this, "正在连接蓝牙，请把手指正确放在设备上！",Toast.LENGTH_LONG).show();	                	
+	                	break;		                    
+	                case TGDevice.STATE_CONNECTED:
+	                	Toast.makeText(ExaminationActivity.this, "连接成功，请保持设备稳定！",Toast.LENGTH_LONG).show();	                	
+	                	tgDevice.start();
+	                	tgDevice.inputAge = Integer.parseInt( et_age.getText().toString() );
+	                	tgDevice.pass_seconds = 15;
+	                    break;
+	                case TGDevice.STATE_NOT_FOUND:
+	                	Toast.makeText(ExaminationActivity.this, "无法找到设备！",Toast.LENGTH_LONG).show();
+	                	Toast.makeText(ExaminationActivity.this, "蓝牙设备必须匹配！",Toast.LENGTH_LONG).show();
+	                	break;
+	                /*case TGDevice.STATE_NOT_PAIRED:
+	                	tv.append("not paired\n");
+	                	break;*/
+	                case TGDevice.STATE_DISCONNECTED:
+	                	Toast.makeText(ExaminationActivity.this, "结束连接",Toast.LENGTH_LONG).show();	             
+                }
+
+                break;
+            case TGDevice.MSG_POOR_SIGNAL:
+            	/* display signal quality when there is a change of state, or every 30 reports (seconds) */
+            	if (subjectContactQuality_cnt >= 30 || msg.arg1 != subjectContactQuality_last) {
+            		if (msg.arg1 == 200) { //200 is for BMD
+	                	Toast.makeText(ExaminationActivity.this, "蓝牙信号质量良好！",Toast.LENGTH_LONG).show();	
+             		}
+            		else {
+	                	Toast.makeText(ExaminationActivity.this, "蓝牙信号质量差！请保持平稳接触。" + msg.arg1,Toast.LENGTH_LONG).show();	
+ 
+            		}
+            		subjectContactQuality_cnt = 0;
+            		subjectContactQuality_last = msg.arg1;
+            	}
+                break;
+            case TGDevice.MSG_RAW_DATA:	  
+                
+            	break;
+            case TGDevice.MSG_HEART_RATE:
+            	tv_HeartRate.setText(msg.arg1+"");
+            	updateChart(hseries,msg.arg1);
+                break;
+            case TGDevice.MSG_ATTENTION:
+
+            	break;
+            case TGDevice.MSG_MEDITATION:
+
+            	break;
+            case TGDevice.MSG_BLINK:
+                
+            	break;
+            case TGDevice.MSG_RAW_COUNT:
+                
+            	break;
+            case TGDevice.MSG_EKG_RRINT:
+                tv_rrInterval.setText( msg.arg1+""); 
+                
+                
+                int rr = msg.arg1;
+                 	
+    			if(rr<300)
+    			{
+    				if(i>2&&i<=4)
+    				{
+    					Toast.makeText(ExaminationActivity.this, "请安静的躺在床上或者坐在座位上", 1000).show();
+    				}
+    				else if(i>10)
+    				{                final SmsManager smsManager;    //短信
+                        smsManager = SmsManager.getDefault();   
+    					new Handler().postDelayed(new Runnable(){	                			
+    					public void run() 
+    					{
+    						smsManager.sendTextMessage("18359242826", null, "心跳过速了", null, null);
+    						}	   }, 1000);
+
+    					i = 0;
+    					
+    				}
+    				//Toast.makeText(ExaminationActivity.this, i,1000).show();
+    				i++;
+    				j=0;k=0;
+    			}
+    			else if(rr>1500)
+    			{
+    				if(j>=2&&j<=4)
+    				{
+    					Toast.makeText(ExaminationActivity.this, "你即将死亡", 1000).show();
+    				}
+    				else if(j>10)
+    				{
+    					final SmsManager smsManager;     	
+                        smsManager = SmsManager.getDefault();  
+    					new Handler().postDelayed(new Runnable(){	                			    				
+    					public void run() 
+    					{
+    						smsManager.sendTextMessage("18359242826", null, "心跳过缓了", null, null);
+    						}	   }, 1000);
+    					j=0;
+    				}
+    				//Toast.makeText(ExaminationActivity.this, j,1000).show();
+    				j++;
+    				i=0;k=0;
+    			}
+    			else if(rr>3000)
+    			{
+    				if(k>5)
+    				{
+    					final SmsManager smsManager;     	
+                        smsManager = SmsManager.getDefault();  
+    					new Handler().postDelayed(new Runnable(){	                			
+    					public void run() 
+    					{
+    						smsManager.sendTextMessage("18359242826", null, "心跳停搏了", null, null);
+    						}	   }, 1000);
+    					k=0;
+    				}
+    				
+    				k++;
+    				i=0;j=0;
+
+    			}
+ //               alarm(RRInt);
+            	break;
+            case TGDevice.MSG_LOW_BATTERY:
+            	Toast.makeText(getApplicationContext(), "设备电量不足!", Toast.LENGTH_SHORT).show();
+            	break;
+            case TGDevice.MSG_RAW_MULTI:
+
+            	break;
+            case TGDevice.MSG_RELAXATION:
+            	tv_RelaxationLevel.setText(msg.arg1+"");
+            	break;
+            case TGDevice.MSG_RESPIRATION:
+            	//print out about 64s after touching, then update per 10s
+            	//Float r = (Float)msg.obj;
+            	tv_RespirationRate.setText(String.valueOf(msg.obj));
+            	//Toast.makeText(getApplicationContext(), "Resp Rate: "+String.valueOf(msg.obj), Toast.LENGTH_SHORT).show();
+            	break;
+            case TGDevice.MSG_HEART_AGE:
+                tv_HeartAge.setText( msg.arg1+"" );
+                break;
+            case TGDevice.MSG_HEART_AGE_5MIN:
+                tv_5minHeartAge.setText( msg.arg1+"" );
+                break;
+                
+            case TGDevice.MSG_ERR_CFG_OVERRIDE:
+                switch (msg.arg1) {
+                case TGDevice.ERR_MSG_BLINK_DETECT:
+                	Toast.makeText(getApplicationContext(), "Override: blinkDetect", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_TASKFAMILIARITY:
+                	Toast.makeText(getApplicationContext(), "Override: Familiarity", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_TASKDIFFICULTY:
+                	Toast.makeText(getApplicationContext(), "Override: Difficulty", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_POSITIVITY:
+                	Toast.makeText(getApplicationContext(), "Override: Positivity", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_RESPIRATIONRATE:
+                	Toast.makeText(getApplicationContext(), "Override: Resp Rate", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                	Toast.makeText(getApplicationContext(), "Override: code: "+msg.arg1+"", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                break;
+            case TGDevice.MSG_ERR_NOT_PROVISIONED:
+                switch (msg.arg1) {
+                case TGDevice.ERR_MSG_BLINK_DETECT:
+                	Toast.makeText(getApplicationContext(), "No Support: blinkDetect", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_TASKFAMILIARITY:
+                	Toast.makeText(getApplicationContext(), "No Support: Familiarity", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_TASKDIFFICULTY:
+                	Toast.makeText(getApplicationContext(), "No Support: Difficulty", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_POSITIVITY:
+                	Toast.makeText(getApplicationContext(), "No Support: Positivity", Toast.LENGTH_SHORT).show();
+                    break;
+                case TGDevice.ERR_MSG_RESPIRATIONRATE:
+                	Toast.makeText(getApplicationContext(), "No Support: Resp Rate", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                	Toast.makeText(getApplicationContext(), "No Support: code: "+msg.arg1+"", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                break;
+            default:
+            	break;
+        }
+        }
+
+/*		private void alarm(int rr) {
+			// TODO Auto-generated method stub
+       		
+          
+		}
+		*/
+
+    };
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+

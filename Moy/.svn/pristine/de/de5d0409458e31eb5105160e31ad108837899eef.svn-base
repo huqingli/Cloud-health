@@ -1,0 +1,43 @@
+package com.moy.activity;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
+
+public class ResetpwdActivity extends Activity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.resetpwd);
+		
+		Button return_btn = (Button)findViewById(R.id.return_btn);
+		Button confirm = (Button)findViewById(R.id.confirm);
+		
+		return_btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
+		
+		confirm.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(ResetpwdActivity.this, LoginActivity.class);
+				Bundle bundle = new Bundle();
+				intent.putExtras(bundle);
+				startActivity(intent);
+			}
+		});
+	}
+
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tips_bg.png",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\drawable-xhdpi\\tips_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tips_bg.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\drawable-xhdpi\\tips_bg.png"
+    }
+]

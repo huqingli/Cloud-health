@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/white">
+    
+    <LinearLayout 
+        style="@style/layout_vertical"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+        
+        <TextView
+        android:text="健康管理"
+        android:textSize="36sp"
+        style="@style/layout_wrap"
+        android:layout_gravity="center"
+		android:gravity="center"
+        android:textColor="@drawable/blue"/>
+        
+    </LinearLayout>
+    <View 
+        android:layout_height="2px"
+        style="@style/layout_vertical"
+        android:background="@drawable/black"/>
+    
+    <TextView
+        android:text="欢迎来到健康管理！"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="24sp"/>
+    
+<LinearLayout 
+    style="@style/layout_vertical"
+    android:layout_weight="1"
+    android:orientation="vertical">
+        <View android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <Button
+            android:id="@+id/see"
+            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_confirm"
+            android:text="点击查看近7次结果趋势图"
+            android:textColor="@drawable/bt_general_attribute"
+            android:textSize="22sp"
+            android:gravity="center" />
+
+       </LinearLayout>
+
+   
+   <LinearLayout 
+       android:layout_weight="1"
+       style="@style/layout_vertical"
+       android:orientation="horizontal">
+        <ImageButton 
+            android:id="@+id/testresult"
+            android:layout_weight="1"
+            style="@style/layout_horizontal"
+            android:src="@drawable/imgbtn_food"
+            android:scaleType="fitCenter"
+            android:background="@drawable/transparent"/>
+        <ImageButton 
+            android:id="@+id/food"
+            android:layout_weight="1"
+            style="@style/layout_horizontal"
+            android:src="@drawable/imgbtn_sport"
+            android:scaleType="fitCenter"
+            android:background="@drawable/transparent"/>
+       
+   </LinearLayout>
+    
+
+</LinearLayout>

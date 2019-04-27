@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <TextView
+        android:textSize="24.0dip"
+        android:id="@+id/device_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="item"/>
+    <TextView
+        android:textSize="12.0dip"
+        android:id="@+id/device_address"
+        android:layout_width="fill_parent"
+        android:layout_height="14dp" />
+</LinearLayout>

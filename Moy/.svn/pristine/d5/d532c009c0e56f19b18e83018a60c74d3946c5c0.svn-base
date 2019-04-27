@@ -1,0 +1,12 @@
+package com.moy.util;
+
+public class ConnectUtil {
+	
+	public static final String BASE_URL = "http://192.168.220.130:8080/moy/";
+			//"http://172.18.8.215:8080/moy/";
+			//"http://100.133.138.108:8080/moy/";
+			//"http://172.18.8.202:8080/moy/";
+			//"http://120.24.38.200:8080/web/moy/";
+			//"http://192.168.253.1:8080/moy/";
+
+}

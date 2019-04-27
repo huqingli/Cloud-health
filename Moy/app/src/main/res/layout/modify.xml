@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout 
+        android:layout_height="60dp"
+        style="@style/layout_vertical"
+        android:orientation="horizontal"
+        android:background="#03A9f4"
+        android:gravity="center"
+        android:fitsSystemWindows="true"
+
+        >
+        <Button
+            android:id="@+id/return_btn"
+            style="@style/layout_horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@mipmap/back"
+            android:scaleX="0.3"
+            android:scaleY="0.4" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            style="@style/layout_horizontal"
+            android:text="修改资料"
+            android:textSize="26sp"
+            android:textColor="@drawable/white"
+            android:gravity="center"
+            />
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"/>
+            
+    </LinearLayout>
+
+    <TableLayout
+        style="@style/layout_vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1">
+
+        <TableRow
+            style="@style/layout_vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp">
+            <TextView
+                style="@style/layout_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="昵称"
+                android:textSize="18sp"
+                android:textColor="@drawable/blue" />
+            <EditText
+                android:id="@+id/username"
+                android:layout_weight="2"
+                android:layout_height="30dp"
+                style="@style/layout_horizontal"
+                android:background="@drawable/bg_edittext"
+                android:textSize="18sp" />
+            <View
+                android:layout_weight="0.2"
+                style="@style/layout_horizontal"/>
+        </TableRow>
+
+        <TableRow
+            style="@style/layout_vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp">
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="性别"
+            android:textSize="18sp"
+            android:textColor="@drawable/blue" />
+        <EditText
+            android:id="@+id/sex"
+            android:layout_weight="2"
+            android:layout_height="30dp"
+            style="@style/layout_horizontal"
+            android:background="@drawable/bg_edittext"
+            android:textSize="18sp" />
+        <View
+            android:layout_weight="0.2"
+            style="@style/layout_horizontal"/>
+        </TableRow>
+        
+        <TableRow 
+            android:layout_weight="1"
+            android:layout_marginTop="5dp">
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="年龄"
+            android:textSize="18sp"
+            android:textColor="@drawable/blue"/>
+        <EditText 
+            android:id="@+id/age"
+            android:layout_weight="2"
+            style="@style/layout_horizontal"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_edittext"
+            android:textSize="18sp"
+            android:inputType="number"/>
+        <View
+            android:layout_weight="0.2"
+            style="@style/layout_horizontal"/>
+        </TableRow>
+        
+        <TableRow 
+            android:layout_weight="1"
+            style="@style/layout_vertical"
+            android:layout_marginTop="5dp">
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="身高"
+            android:textSize="18sp"
+            android:textColor="@drawable/blue"/>
+        <EditText 
+            android:id="@+id/height"
+            android:layout_weight="2"
+            style="@style/layout_horizontal"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_edittext"
+            android:textSize="18sp"
+            android:inputType="number"/>
+        <View
+            android:layout_weight="0.2"
+            style="@style/layout_horizontal"/>
+        </TableRow>
+        
+        <TableRow 
+            android:layout_weight="1"
+            style="@style/layout_vertical"
+            android:layout_marginTop="5dp">
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="体重"
+            android:textSize="18sp"
+            android:textColor="@drawable/blue"/>
+        <EditText 
+            android:id="@+id/weight"
+            android:layout_weight="2"
+            android:layout_height="30dp"
+            style="@style/layout_horizontal"
+            android:background="@drawable/bg_edittext"
+            android:textSize="18sp"
+            android:inputType="number"/>
+
+        <View
+            android:layout_weight="0.2"
+            style="@style/layout_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            style="@style/layout_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/layout_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="紧急联系电话"
+                android:textSize="18sp"
+                android:textColor="@drawable/blue"/>
+            <EditText
+                android:id="@+id/merphone"
+                android:layout_weight="2"
+                android:layout_height="30dp"
+                style="@style/layout_horizontal"
+                android:background="@drawable/bg_edittext"
+                android:textSize="18sp"
+                android:inputType="number"/>
+
+            <View
+                android:layout_weight="0.2"
+                style="@style/layout_horizontal"/>
+        </TableRow>
+
+        
+    </TableLayout>
+    
+    <Button
+          android:id="@+id/confirm"
+          android:layout_marginTop="40dp"
+          android:layout_height="50dp"
+          android:layout_width="300dp"
+          android:text="确定"
+          android:textSize="28sp"
+          android:textColor="@drawable/white"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:background="@drawable/bg_confirm"/>
+    
+    <View
+        android:layout_weight="1"
+        style="@style/layout_vertical"/>
+
+</LinearLayout>

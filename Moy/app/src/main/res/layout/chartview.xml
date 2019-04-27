@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:id="@+id/rl1"
+	android:background="@android:color/white">
+	<View
+		android:layout_width="wrap_content"
+		style="@style/layout_vertical"
+		android:layout_height="20dp"
+		android:clipToPadding="true"
+		android:fitsSystemWindows="true"
+		android:orientation="horizontal"
+		android:weightSum="1"
+		android:background="#7A7A7A" />
+
+
+	<com.moy.util.ChartView
+		android:layout_width="match_parent"
+		android:id="@+id/myView"
+		android:layout_height="wrap_content" />
+
+	<LinearLayout
+		android:layout_alignParentBottom="true"
+		android:orientation="vertical"
+		android:layout_height="150dp"
+		android:layout_width="match_parent">"
+		<Button
+			android:id="@+id/re"
+			android:layout_height="70dp"
+			android:layout_width="200dp"
+			android:background="#000000"
+			android:text="返回首页"
+			android:layout_gravity="center"
+			android:textColor="@drawable/logbtn_color"
+			android:textSize="36sp"
+			android:gravity="center" />
+	</LinearLayout>
+
+
+</RelativeLayout>
+ 

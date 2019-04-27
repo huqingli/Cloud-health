@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\homepage_view.png",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\drawable-xxhdpi\\homepage_view.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\homepage_view.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\drawable-xxhdpi\\homepage_view.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\secondpage_imgview.png",
+        "source": "E:\\AndroidStudioProjects\\Moy\\app\\src\\main\\res\\drawable-xxhdpi\\secondpage_imgview.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\secondpage_imgview.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\Moy\\app\\src\\main\\res\\drawable-xxhdpi\\secondpage_imgview.png"
+    }
+]

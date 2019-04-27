@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.moy.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.moy.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddinfoServlet</servlet-name>
+    <servlet-class>com.moy.servlet.AddinfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ForgotServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ForgotServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifyServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ModifyServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifyPwdServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ModifyPwdServlet</servlet-class>
+  </servlet>
+     <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifyUsernameServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ModifyUsernameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ResultServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ResultServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SaverateServlet</servlet-name>
+    <servlet-class>com.moy.servlet.SaverateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetdataServlet</servlet-name>
+    <servlet-class>com.moy.servlet.GetdataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ResultAboutTestServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ResultAboutTestServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckServlet</servlet-name>
+    <servlet-class>com.moy.servlet.CheckServlet</servlet-class>
+  </servlet>
+ <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckusernameServlet</servlet-name>
+    <servlet-class>com.moy.servlet.CheckusernameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckUsername1Servlet</servlet-name>
+    <servlet-class>com.moy.servlet.CheckUsername1Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckSecpwdServlet</servlet-name>
+    <servlet-class>com.moy.servlet.CheckSecpwdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifySecpwdServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ModifySecpwdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ResultDataServlet</servlet-name>
+    <servlet-class>com.moy.servlet.ResultDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>insertServlet</servlet-name>
+    <servlet-class>com.moy.servlet.insertServlet</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CheckServlet</servlet-name>
+    <url-pattern>/checkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckusernameServlet</servlet-name>
+    <url-pattern>/checkusernameServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>CheckUsername1Servlet</servlet-name>
+    <url-pattern>/CheckUsername1Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddinfoServlet</servlet-name>
+    <url-pattern>/addinfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForgotServlet</servlet-name>
+    <url-pattern>/forgotServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyServlet</servlet-name>
+    <url-pattern>/modifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyPwdServlet</servlet-name>
+    <url-pattern>/ModifyPwdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyUsernameServlet</servlet-name>
+    <url-pattern>/ModifyUsernameServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ResultServlet</servlet-name>
+    <url-pattern>/resultServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaverateServlet</servlet-name>
+    <url-pattern>/saverateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetdataServlet</servlet-name>
+    <url-pattern>/getdataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResultAboutTestServlet</servlet-name>
+    <url-pattern>/resultAboutTestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckSecpwdServlet</servlet-name>
+    <url-pattern>/CheckSecpwdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifySecpwdServlet</servlet-name>
+    <url-pattern>/ModifySecpwdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResultDataServlet</servlet-name>
+    <url-pattern>/ResultDataServlet</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+    <servlet-name>insertServlet</servlet-name>
+    <url-pattern>/insertServlet</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

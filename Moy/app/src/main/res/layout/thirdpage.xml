@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:weightSum="1"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_height="60dp"
+        android:background="#03A9f4"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/layout_wrap"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="健康管理"
+            android:layout_marginTop="15dp"
+            android:textColor="@drawable/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="与我相关"
+        android:textSize="15dp"
+        android:alpha="0.5"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#CCCCCC"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp">
+        <ImageView
+            android:id="@+id/thirdpage_img_baogao"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/baogao"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/thirdpage_img_baogao"
+            android:text="检测报告"
+            android:textSize="18dp"/>
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/rightarrow"/>
+        <Button
+            android:id="@+id/bt_thirdpage_baogao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#CCCCCC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp">
+        <ImageView
+            android:id="@+id/thirdpage_img_yinshi"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/yingshi"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/thirdpage_img_yinshi"
+            android:text="膳食推荐"
+            android:textSize="18dp"/>
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/rightarrow"/>
+        <Button
+            android:id="@+id/bt_thirdpage_yinshi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#CCCCCC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp">
+        <ImageView
+            android:id="@+id/thirdpage_img_yundong"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/yundong"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/thirdpage_img_yundong"
+            android:text="运动相关"
+            android:textSize="18dp"/>
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/rightarrow"/>
+        <Button
+            android:id="@+id/bt_thirdpage_yundong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#CCCCCC" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp">
+        <ImageView
+            android:id="@+id/thirdpage_img_qiujiu"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/qiujiu"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/thirdpage_img_qiujiu"
+            android:text="紧急联系人"
+            android:textSize="18dp"/>
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/rightarrow"/>
+        <Button
+            android:id="@+id/bt_thirdpage_qiujiu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent"
+            />
+    </RelativeLayout>
+
+
+
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#CCCCCC" />
+
+
+
+
+</LinearLayout>
+

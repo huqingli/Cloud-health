@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="0.01"
+        android:background="@drawable/light_blue"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/return_btn"
+            style="@style/layout_horizontal"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/back"
+            android:scaleX="0.3"
+            android:scaleY="0.4" />
+        <!--<View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@drawable/light_blue"/>-->
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/layout_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.13"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@drawable/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_countryandarea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="国家和地区"
+            android:textColor="@drawable/dark_gray"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/ibt_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/head" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="360dp"
+            android:layout_height="2px"
+            android:layout_alignLeft="@+id/tv_countryandarea"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/light_gray" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_countryandarea"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="180dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/ibt_icon"
+            android:background="@drawable/transparent"
+            android:text="中国(+86)"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_register_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textColor="@drawable/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/light_gray" />
+
+        <EditText
+            android:id="@+id/PhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_register_phonenum"
+            android:background="@null"
+            android:hint="请填写手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColorHint="@drawable/gray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_register_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            android:textColor="@drawable/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="36dp"
+            android:layout_toRightOf="@+id/tv_register_password"
+            android:background="@null"
+            android:hint="请填写密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@drawable/gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/light_gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击下面的“注册”按钮，即表示你同意《健康管理系统软件许可及服务协议》和《隐私政策》" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape2"
+        android:text="注    册"
+        android:textColor="@drawable/bt_text_attribute"
+        android:textSize="19sp" />
+
+
+</LinearLayout>

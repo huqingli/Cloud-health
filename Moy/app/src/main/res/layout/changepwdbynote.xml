@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/light_blue"
+        android:fitsSystemWindows="true">
+
+        <Button
+
+            android:id="@+id/bt_return2"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/back"
+            android:scaleX="0.3"
+            android:scaleY="0.4" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="找回密码"
+            android:textSize="20sp"
+            style="@style/layout_horizontal"
+            android:textColor="@drawable/white"
+            />
+    </LinearLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码修改"
+            android:textColor="@drawable/black"
+            android:textSize="30sp"/>
+    </LinearLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/tv_login_message_step2_phonenumhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:text="手机号"
+            android:textSize="16sp"
+            android:textColor="@drawable/black"/>
+        <EditText
+            android:id="@+id/cpbn_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_login_message_step2_phonenumhint"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            android:hint="请输入您的手机号"
+            android:textColor="@drawable/dark_gray"
+            android:textSize="16sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/gray"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:text="新密码"
+            android:textSize="16sp"
+            android:textColor="@drawable/black"/>
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/cpbn_newpwd"
+            android:layout_toRightOf="@id/view3"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的新密码"
+            android:textSize="16dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/gray"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:text="确认密码"
+            android:textSize="16sp"
+            android:textColor="@drawable/black"/>
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/cpbn_verifypwd"
+            android:layout_toRightOf="@id/view4"
+            android:layout_marginLeft="12dp"
+            android:hint="确认您的密码"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/gray"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/cpbn_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:text="验证码"
+            android:textSize="16sp"
+            android:textColor="@drawable/black"/>
+        <EditText
+            android:id="@+id/cpbn_inputcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请填写验证码"
+            android:textSize="16sp"
+            android:layout_marginLeft="28dp"
+            android:layout_toLeftOf="@+id/cpbn_getcode"
+            android:layout_toRightOf="@+id/cpbn_view1"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/gray"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
+            android:id="@+id/cpbn_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_getcode"
+            android:text="获取验证码"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/cpbn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="确定修改"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape2"/>
+    </LinearLayout>
+
+
+</LinearLayout>

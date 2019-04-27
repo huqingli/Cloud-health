@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="gray">#c0c0c0</drawable>
+    <drawable name="blue">#27408B</drawable>
+    <drawable name="light_blue">#436EEE</drawable>
+    <drawable name="white">#FFFFFF</drawable>
+    <drawable name="transparent">#0000</drawable>
+    <drawable name="black">#000</drawable>
+    <drawable name="light_black">#404040</drawable>
+    <drawable name="tab_gray">#7F7F7F</drawable>
+    <drawable name="tab_blue">#00A2E8</drawable>
+    <drawable name="green">#008b00</drawable>
+    <drawable name="dark_green">#006400</drawable>
+    <drawable name="yellow">#EEC900</drawable>
+    <drawable name="little_blue">#bbffff</drawable>
+    <drawable name="white_blue">#87a3f0</drawable>
+    <drawable name="light_gray">#EAEAEA</drawable>
+    <drawable name="brown">#C2C2C2</drawable>
+    <drawable name="red">#ff0000</drawable>
+    <drawable name="dark_gray">#252525</drawable>
+    <color name="white">#FFFFFF</color>
+    <drawable name="gray_transparent">#20C0C0C0</drawable>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="toolbarcolor">#3F51B5</color>
+    <color name="orange">#fff58220</color>
+    <color name="gray">#ffdcdcdc</color>
+    <color name="dark_blue">#ff1a284a</color>
+    <color name="dark_green">#ff4aad93</color>
+    <color name="title_color">#03A9f4</color>
+</resources>

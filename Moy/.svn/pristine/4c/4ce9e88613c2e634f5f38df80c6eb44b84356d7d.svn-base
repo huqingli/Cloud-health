@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\.android\build-cache\f7119d76d5d303010a3c8c2bdc61c3bfc71adba0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\classes_d9dadf8dd7bf4e34c8c0d645b5ff5e0e42dbdf2d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\Moy\app\libs\MobCommons-2017.0607.1736.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="26d8b21098208806ac92abba3cbbf9859cda903a">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\MobCommons-2017.0607.1736_1f7d6f7ca75a684494de252681b652ca98df233f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\.android\build-cache\aa2af6bc13d593fa12e219b159b6c844f953742f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\classes_b0631a13f64b2b13fe7db932b4e510989ab7579f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\Moy\app\libs\ThinkGearBase.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e4d2f043fad48b207cf754c23d3fd03b2fdfb838">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\ThinkGearBase_4bbeeea2d44fa0820ab96d994e8aaab95697e0e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\.android\build-cache\1b2e1a196c7fbdd7615d613bdbfc73566e4f5cfe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f05ef472841da86c5b42cf99abcb3ccd63565e49">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\classes_7597a6532a29da46ee8b72752d92b8e2b6cce100.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\Moy\app\libs\ThinkGearPackX.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18ab1639ffbbaf6092d2303f5cf85911b44feeb5">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\ThinkGearPackX_08ffbe3eac2f8f88f7dcda714ebddc235e36556b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_a64462db3a646261a89d995d86d46bf291a35ea7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\.android\build-cache\8fb39a631a311e2e42c40b38e49fcbb3d7e406ae\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\classes_07c378e2adb2baac224ce54862eababeb1f4a860.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\Moy\app\libs\achartengine-0.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f51933deafdd1ffc8f3a2d7214260f124dd10af6">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\achartengine-0.7.0_ab9e9ef7e84a38218412ed38a3076031e649c805.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\Moy\app\libs\MobTools-2017.0607.1736.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd18b5e54c100ded555e92c371c16bea49002ed">
+        <dex dex="C:\Users\Administrator\Desktop\Moy\app\build\intermediates\pre-dexed\debug\MobTools-2017.0607.1736_8d2e97feb82bc72f0393eee07f7a679ad996b8b6.jar" />
+    </item>
+
+</items>

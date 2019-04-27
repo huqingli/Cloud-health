@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/white">
+    
+    <LinearLayout 
+        style="@style/layout_vertical"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+        
+        <TextView
+        android:text="健康测试"
+        android:textSize="36sp"
+        style="@style/layout_wrap"
+        android:layout_gravity="center"
+		android:gravity="center"
+        android:textColor="@drawable/blue"/>
+        
+    </LinearLayout>
+    <View 
+        android:layout_height="2px"
+        style="@style/layout_vertical"
+        android:background="@drawable/black"/>
+    
+    
+    <LinearLayout
+        style="@style/layout_full"
+        android:orientation="vertical">
+        <ImageView 
+            android:layout_weight="3"
+            style="@style/layout_vertical"
+            android:src="@drawable/secondpage_imgview"
+            android:layout_gravity="center_horizontal"
+            android:maxWidth="400dp"
+            android:maxHeight="400dp"/>
+        <TextView
+            android:layout_weight="1.6"
+            style="@style/layout_vertical"
+            android:text="请打开设备开关开始测量！"
+            android:textColor="@drawable/blue"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/start"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="@drawable/bt_general_attribute"
+            android:layout_gravity="center_horizontal"
+            android:text="开始测量"
+            android:textSize="36sp"
+            android:textColor="@drawable/white"
+            android:layout_marginBottom="30dp"/>"
+    </LinearLayout>
+    
+
+</LinearLayout>

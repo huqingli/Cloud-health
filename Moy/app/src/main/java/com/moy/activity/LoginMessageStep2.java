@@ -1,0 +1,250 @@
+package com.moy.activity;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.mob.MobSDK;
+import com.moy.handler.LoginHandler;
+import com.moy.pojo.UserPOJO;
+import com.moy.synchonization.Syncfromcloud;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+
+import static com.moy.util.MyApplication.setUser;
+import static com.moy.util.SendMessageUtil.getAppKey;
+import static com.moy.util.SendMessageUtil.getAppSecret;
+
+/**
+ * Created by Administrator on 2017/10/4.
+ */
+
+public class LoginMessageStep2 extends Activity implements View.OnClickListener {
+
+    private Context mContext;
+
+    private Button bt_getcode;
+    private Button bt_login;
+    private Button bt_return;
+    private Button bt_clear;
+    private EditText et_code;
+    private TextView tv_phonenum;
+    private View line_line2;
+    private Drawable onFocus;
+    private Drawable noFocus;
+    private static String PhoneNum;
+    private static String CountryCode;
+    private static String VerificationCode;
+
+
+
+    EventHandler handler;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.login_message_step2);
+
+        MobSDK.init(LoginMessageStep2.this, getAppKey(), getAppSecret());
+        mContext = this;
+
+        Intent intent = getIntent();
+        PhoneNum = intent.getStringExtra("PhoneNum");
+        CountryCode = intent.getStringExtra("CountryCode");
+
+        bt_getcode = (Button) findViewById(R.id.bt_login_message_step2_getcode);
+        bt_login = (Button) findViewById(R.id.bt_login_message_step2_login);
+        bt_clear = (Button) findViewById(R.id.bt_login_message_step2_clear);
+        bt_return = (Button) findViewById(R.id.bt_login_message_step2_return);
+        et_code = (EditText) findViewById(R.id.et_login_message_step2_verificationcode);
+        tv_phonenum = (TextView) findViewById(R.id.tv_login_message_step2_phonenum);
+        line_line2 = findViewById(R.id.line_login_message_step2_line2);
+
+        onFocus = this.getResources().getDrawable(R.drawable.light_blue);
+        noFocus = this.getResources().getDrawable(R.drawable.gray);
+
+        bt_clear.setOnClickListener(this);
+        bt_return.setOnClickListener(this);
+        bt_getcode.setOnClickListener(this);
+        bt_login.setOnClickListener(this);
+
+        tv_phonenum.setText("+"+CountryCode+" " + PhoneNum);
+
+        et_code.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    line_line2.setBackgroundDrawable(onFocus);
+                } else {
+                    line_line2.setBackgroundDrawable(noFocus);
+                }
+            }
+        });
+        et_code.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.length() == 0) {
+                    bt_login.setEnabled(false);
+                    bt_clear.setVisibility(View.INVISIBLE);
+                } else {
+                    bt_login.setEnabled(true);
+                    bt_clear.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        handler = new EventHandler() {
+            @Override
+            public void afterEvent(int event, int result, Object data) {
+                if (result == SMSSDK.RESULT_COMPLETE) {
+                    //回调完成
+                    if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
+                        //提交验证码成功
+
+
+                    } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
+                        //获取验证码成功
+
+                    } else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {
+                        //获取支持的国家代码
+                    }
+                } else {
+                    ((Throwable) data).printStackTrace();
+                    Throwable throwable = (Throwable) data;
+                    try {
+                        JSONObject obj = new JSONObject(throwable.getMessage());
+                        final String des = obj.optString("detail");
+                        if (!TextUtils.isEmpty(des)) {
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        SMSSDK.registerEventHandler(handler);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.bt_login_message_step2_clear:
+                et_code.setText("");
+                break;
+            case R.id.bt_login_message_step2_getcode:
+                Log.i("LMessage_CCode",CountryCode);
+                SMSSDK.getVerificationCode(CountryCode, PhoneNum);
+                MyCountdownTimer myCountdownTimer = new MyCountdownTimer(60000, 1000);
+                myCountdownTimer.start();
+                break;
+            case R.id.bt_login_message_step2_login:
+                AlertDialog dlg = alert();
+                VerificationCode = et_code.getText().toString().trim();
+                login();
+                dlg.dismiss();
+                break;
+            default:
+                return;
+        }
+
+    }
+
+    private void login() {
+        String result = LoginHandler.login(CountryCode, PhoneNum, VerificationCode);
+        try {
+            JSONObject json = new JSONObject(result);
+            //JSON一种轻量级的数据交换格式
+            if (json.getString("message").equals("fail")) {
+                Toast.makeText(this, "验证码与手机号不匹配", Toast.LENGTH_LONG).show();
+
+            } else if (json.getString("message").equals("success")) {
+                boolean info = Syncfromcloud.Download(result, mContext);
+                if(info){
+                    Toast.makeText(this, "登录成功", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent();
+                    intent.setClass(this, MenuActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    this.finish();
+                }
+                else{
+                    Toast.makeText(this, "加载至本地数据库失败", Toast.LENGTH_LONG).show();
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private class MyCountdownTimer extends CountDownTimer {
+        public MyCountdownTimer(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        //计时过程
+        @Override
+        public void onTick(long l) {
+            //防止计时过程中重复点击
+            bt_getcode.setClickable(false);
+            bt_getcode.setEnabled(false);
+            bt_getcode.setBackgroundDrawable(getResources().getDrawable(R.drawable.transparent));
+            bt_getcode.setText(l / 1000 + "秒后重新获取");
+        }
+
+        //计时完毕的方法
+        @Override
+        public void onFinish() {
+            //重新给Button设置文字
+            bt_getcode.setText("获取验证码");
+            bt_getcode.setBackgroundDrawable(getResources().getDrawable(R.drawable.bt_getcode));
+            //设置可点击
+            bt_getcode.setEnabled(true);
+            bt_getcode.setClickable(true);
+        }
+    }
+
+    private AlertDialog alert() {
+        final AlertDialog dlg = new AlertDialog.Builder(this).create();
+        Window window = dlg.getWindow();
+        dlg.show();
+        window.setContentView(R.layout.loading);// 设置窗口的内容页面,shrew_exit_dialog.xml文件中定义view内容
+        return dlg;
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SMSSDK.unregisterEventHandler(handler);
+    }
+}

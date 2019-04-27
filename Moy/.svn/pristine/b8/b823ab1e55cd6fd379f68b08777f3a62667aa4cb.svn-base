@@ -1,0 +1,190 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:2:1-81:12
+	package
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:7:5-8:23
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.BLUETOOTH
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:9:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:10:5-74
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:10:22-71
+uses-permission#android.permission.SEND_SMS
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.READ_CONTACTS
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:12:5-72
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:12:22-69
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:13:5-75
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:13:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:16:22-73
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:17:5-70
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:17:22-67
+uses-permission#android.permission.READ_SMS
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:18:5-67
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:18:22-64
+uses-permission#android.permission.GET_TASKS
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:19:22-65
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:20:22-76
+uses-sdk
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:23:5-25:41
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\DELL\.android\build-cache\68bfb213b90e57bf7200a4b0f318c043a3cc4558\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\DELL\.android\build-cache\97bf64f476710a6a75eb8cc735584776e23a6db0\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\DELL\.android\build-cache\0088203dee669e30e095da7d5a95d069fb8c715a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [:SMSSDK-3.0.0:] C:\Users\DELL\.android\build-cache\ffcf999f89f1769de6c18c82a9aeb0c36206e832\output\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-core-ui:25.2.0] C:\Users\DELL\.android\build-cache\97bf64f476710a6a75eb8cc735584776e23a6db0\output\AndroidManifest.xml:23:9-55
+	android:targetSdkVersion
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:25:9-38
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:24:9-35
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+		INJECTED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml
+application
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:27:5-78:19
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\DELL\.android\build-cache\97bf64f476710a6a75eb8cc735584776e23a6db0\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\DELL\.android\build-cache\0088203dee669e30e095da7d5a95d069fb8c715a\output\AndroidManifest.xml:25:5-20
+MERGED from [:SMSSDK-3.0.0:] C:\Users\DELL\.android\build-cache\ffcf999f89f1769de6c18c82a9aeb0c36206e832\output\AndroidManifest.xml:11:5-12:19
+	android:label
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:31:9-41
+	android:allowBackup
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:29:9-35
+	android:icon
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:30:9-45
+	android:theme
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:32:9-68
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:28:9-50
+activity#com.moy.activity.SplashActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:33:9-42:20
+	android:label
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:35:13-45
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:34:13-43
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:36:13-40:29
+action#android.intent.action.MAIN
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:39:17-77
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:39:27-74
+activity#com.moy.activity.LoginActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:43:9-60
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:43:19-48
+activity#com.moy.activity.ForgotpwdActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:44:9-45:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:44:19-52
+activity#com.moy.activity.RegisterActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:46:9-47:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:46:19-51
+activity#com.moy.activity.MenuActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:48:9-49:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:48:19-47
+activity#com.moy.activity.AddinfoActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:50:9-51:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:50:19-50
+activity#com.moy.activity.ExaminationActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:52:9-53:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:52:19-54
+activity#com.moy.activity.FoodActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:54:9-55:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:54:19-47
+activity#com.moy.activity.ResultActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:56:9-57:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:56:19-49
+activity#com.moy.activity.SportActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:58:9-59:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:58:19-48
+activity#com.moy.activity.ModifyActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:60:9-61:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:60:19-49
+activity#com.moy.activity.ResultAboutTestActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:62:9-63:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:62:19-58
+activity#com.moy.activity.ChartActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:64:9-65:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:64:19-48
+activity#com.moy.activity.AssistanceActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:66:9-67:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:66:19-53
+activity#com.moy.activity.FancychartActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:68:9-69:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:68:19-53
+activity#com.moy.activity.ValidateActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:70:9-71:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:70:19-51
+activity#com.moy.activity.LoginPopupActivity
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:72:9-73:20
+	android:theme
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:72:54-88
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:72:19-53
+activity#com.moy.activity.LoginMessageStep1
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:74:9-75:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:74:19-52
+activity#com.moy.activity.LoginMessageStep2
+ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:76:9-77:20
+	android:name
+		ADDED from E:\AndroidStudioProjects\Moy\app\src\main\AndroidManifest.xml:76:19-52
